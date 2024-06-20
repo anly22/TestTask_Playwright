@@ -10,7 +10,7 @@ test('Successful login with valid data', async ({page}) =>{
     login.openLoginPage()
     login.login('tomsmith', 'SuperSecretPassword!')
 
-    await page.waitForURL('**/secure') //https://the-internet.herokuapp.com/secure
+    await page.waitForURL('**/secure')
     await expect(secure.msgSuccsessLogin).toBeVisible()
     
 })
